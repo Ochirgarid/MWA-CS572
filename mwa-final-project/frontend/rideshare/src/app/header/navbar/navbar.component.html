@@ -1,0 +1,17 @@
+
+
+<div class="header">
+  <a class="logo" routerLink="/">RideShare</a>
+  <a *ngIf="user" routerLink="driver/rides">Manage Rides</a>
+  <div class="header-right">
+    <button *ngIf="user" nbButton hero shape="round" status="success" size="medium" (click)="logout()" href="#">Log Out<nb-icon
+      icon="log-out-outline"></nb-icon></button>
+
+    <button *ngIf="!user" nbButton hero shape="round" status="success" size="medium" routerLink="/login">Login<nb-icon
+      icon="log-in-outline"></nb-icon></button>
+
+    <button *ngIf="!user" nbButton hero shape="round" status="info" routerLink="/signup">SignUp<nb-icon
+      icon="person-add-outline">
+    </nb-icon></button>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<input #autoInput
+    nbInput
+    type="text"
+    shape="round"
+    class="elem"
+    (input)="onChange()"
+    placeholder="Enter a city"
+    [nbAutocomplete]="auto" />
+
+<nb-autocomplete #auto (selectedChange)="onSelectionChange($event)">
+    <nb-option *ngFor="let option of filteredOptions$ | async" [value]="option">
+        {{ option }}
+    </nb-option>
+</nb-autocomplete>

@@ -1,0 +1,13 @@
+<nb-layout-column>
+    <nb-card>
+        <nb-card-body class="example-items-col">
+            From: <app-city-search (citySearchEvent)="fromCityEvent($event)"> </app-city-search>
+            To: <app-city-search (citySearchEvent)="toCityEvent($event)"> </app-city-search>
+            Date: <input nbInput shape="round" placeholder="Pick a date" class="elem"  [nbDatepicker]="dateTimePicker">
+            <nb-datepicker #dateTimePicker (dateChange)="rideDateChangeEvent($event)"></nb-datepicker>
+            <button nbButton  shape="round" outline status="info" class="elem" (click)="searchRides()">
+                Search<nb-icon icon="search-outline"> </nb-icon>
+            </button>
+        </nb-card-body>
+    </nb-card>
+</nb-layout-column>

@@ -1,0 +1,25 @@
+<nb-card>
+    <nb-card-body>
+
+        <p>User page</p>
+        <nb-user size="large" [name]="user.firstname + ' ' + user.lastname" [title]="user.email" color="#cccccc">
+        </nb-user>
+
+    </nb-card-body>
+</nb-card>
+
+<nb-accordion>
+    <nb-accordion-item *ngFor="let ride of rides">
+        <nb-accordion-item-header>
+            FROM: {{ride.from}} TO: {{ride.to}} DATE: {{ride.date}}
+        </nb-accordion-item-header>
+        <nb-accordion-item-body>
+            Car:{{ride.car.year}}, {{ride.car.model}}
+            Color: {{ride.car.color}}
+            <button status="warning" nbButton>Update</button>
+            <button status="danger" nbButton>Delete</button>
+        </nb-accordion-item-body>
+    </nb-accordion-item>
+</nb-accordion>
+
+<a [routerLink]="['rides', 'add']"> <button status="info" nbButton>Add a ride</button> </a>

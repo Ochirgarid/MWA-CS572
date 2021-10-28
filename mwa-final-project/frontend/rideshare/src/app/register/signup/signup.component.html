@@ -1,0 +1,69 @@
+<form [formGroup]="signupForm" (ngSubmit)="onSignup()">
+       <nb-card class="form-cart">
+              <nb-card-body class="example-items-col items">
+                     <div class="form-header">
+                            <h1 id="title" class="title">Sign Up</h1>
+                            <p class="sub-title">Please fill in this form to create an account</p>
+                     </div>
+
+                     <label class="label" for="firstname">FirstName:</label>
+                     <span class="customWarning"
+                            *ngIf="signupForm.get('firstname').invalid && (signupForm.get('firstname').dirty || signupForm.get('firstname').touched)">
+                            *Invalid Firstname*
+                     </span>
+                     <input formControlName="firstname" nbInput class="elements" status="basic" fullWidth
+                            name="firstname" id="firstname" placeholder="Firstname" shape="semi-round">
+                     <label class="label" for="lastname">LastName:</label>
+                     <span class="customWarning"
+                            *ngIf="signupForm.get('lastname').invalid && (signupForm.get('lastname').dirty || signupForm.get('lastname').touched)">
+                            *Invalid Lastname*
+                     </span>
+                     <input formControlName="lastname" nbInput class="elements" status="basic" fullWidth name="lastname"
+                            id="lastname" placeholder="Lastname" shape="semi-round">
+                     <label class="label" for="username">UserName:</label>
+                     <span class="customWarning"
+                            *ngIf="signupForm.get('username').invalid && (signupForm.get('username').dirty || signupForm.get('username').touched)">
+                            *Invalid Username*
+                     </span>
+                     <input formControlName="username" nbInput class="elements" status="basic" fullWidth name="username"
+                            id="username" placeholder="Username" shape="semi-round">
+                     <label class="label" for="phone">Phone Number:</label>
+                     <span class="customWarning"
+                            *ngIf="signupForm.get('phonenumber').invalid && (signupForm.get('phonenumber').dirty || signupForm.get('phonenumber').touched)">
+                            *Invalid Phone Number*
+                     </span>
+                     <input formControlName="phonenumber" nbInput class="elements" status="basic" fullWidth name="phone"
+                            id="phone" placeholder="phone number" shape="semi-round">
+
+                     <label class="label" for="email">Email address:</label>
+                     <span class="customWarning"
+                            *ngIf="signupForm.get('email').invalid && (signupForm.get('email').dirty || signupForm.get('email').touched)">
+                            *Invalid Email*
+                     </span>
+                     <input formControlName="email" nbInput class="elements" status="basic" fullWidth name="email"
+                            id="email" placeholder="Email address" shape="semi-round">
+
+                     <label class="label" for="password">Password:</label>
+                     <span class="customWarning"
+                            *ngIf="signupForm.get('password').invalid && (signupForm.get('password').dirty || signupForm.get('password').touched)">
+                            *Passwords must be between 6-15 characters long*
+                     </span>
+                     <input formControlName="password" nbInput fullWidth class="elements" name="password"
+                            type="password" id="password" placeholder="password" shape="semi-round">
+                     <label class="label" for="confirm-password">Confirm Password:</label>
+                     <span class="customWarning"
+                            *ngIf="(signupForm.get('password').value !== signupForm.get('confirmpassword').value) ">
+                            *Passwords do not match*
+                     </span>
+                     <input formControlName="confirmpassword" nbInput fullWidth class="elements" name="conf-password"
+                            id="confirm-password" type="password" placeholder="confirm password" shape="semi-round">
+
+                     <button type="submit" nbButton hero shape="semi-round" [disabled]="!signupForm.valid"
+                            status="info">Register</button>
+                     <section class="another-action elements" aria-label="Register">
+                            By clicking the register button, you agree to our <br><a href="#">Terms & Conditions</a>,
+                            and <a href="#">Privacy Policy</a>
+                     </section>
+              </nb-card-body>
+       </nb-card>
+</form>

@@ -1,0 +1,43 @@
+<nb-card class="form-cart">
+
+    <nb-card-body class="example-items-col items">
+        <div class="form-header">
+            <h1 id="title" class="title">Update ride details</h1>
+        </div>
+        <form [formGroup]="updateRideForm" (ngSubmit)="onUpdateRide()">
+
+            <label class="label" for="email">From:</label>
+            <input nbInput type="text" class="elements" status="basic" value="{{rideDetail[0].from}}"
+                placeholder="{{rideDetail[0].from}}" fullWidth name="from" id="from" shape="semi-round" required>
+
+            <label class="label" for="password">To:</label>
+            <input nbInput fullWidth class="elements" name="to" placeholder="Enter destination" type="text" id="to"
+                shape="semi-round">
+
+            <label class="label" for="date">Date:</label>
+            <input nbInput fullWidth shape="semi-round" placeholder="Pick a date" class="elem"
+                [nbDatepicker]="dateTimePicker">
+            <nb-datepicker #dateTimePicker></nb-datepicker>
+
+            <label class="label" for="seatsNum">Seats Available:</label>
+            <input nbInput fullWidth class="elements" name="seatsNum" placeholder="Enter total free seats" type="number"
+                id="seatsNum" shape="semi-round">
+
+            <label class="label" for="carmodel">Car Model:</label>
+            <input nbInput fullWidth class="elements" name="carmodel" placeholder="Enter model of the vehicle"
+                type="text" id="carmodel" shape="semi-round">
+
+            <label class="label" for="year">Year:</label>
+            <input nbInput fullWidth class="elements" name="year" placeholder="Enter year the vehicle was made"
+                type="number" id="year" shape="semi-round">
+
+            <label class="label" for="color">Color:</label>
+            <input nbInput fullWidth class="elements" name="color" placeholder="Enter color of the vehicle" type="text"
+                id="year" shape="semi-round" required> <br>
+
+            <button class="updateRideButton" nbButton type="submit" hero shape="semi-round"
+                status="info">Update</button>
+        </form>
+    </nb-card-body>
+
+</nb-card>

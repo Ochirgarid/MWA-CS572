@@ -1,0 +1,48 @@
+<app-search></app-search>
+<shareride></shareride>
+
+<nb-layout-column>
+  <nb-card>
+    <nb-card-body>
+      <nb-stepper orientation="horizontal">
+        <nb-step [label]="labelOne">
+          <ng-template #labelOne>First step</ng-template>
+          <h3>Sign up.</h3>
+          <p class="lorem">
+            Create an account, if you haven't already, to start going on free trips!
+          </p>
+          <button nbButton disabled nbStepperNext>prev</button>
+          <button nbButton nbStepperNext>next</button>
+        </nb-step>
+        <nb-step [label]="labelTwo">
+          <ng-template #labelTwo>Second step</ng-template>
+          <h3>Enter current location and your destination.</h3>
+          <p class="lorem">
+            Choose between any two places to see rides matching your criteria.
+          </p>
+          <button nbButton nbStepperPrevious>prev</button>
+          <button nbButton nbStepperNext>next</button>
+        </nb-step>
+        <nb-step [label]="labelThree">
+          <ng-template #labelThree>Third step</ng-template>
+          <h3>Choose a ride.</h3>
+          <p class="lorem">
+            Select from a list of rides and chose one that you like best!
+          </p>
+          <button nbButton nbStepperPrevious>prev</button>
+          <button nbButton nbStepperNext>next</button>
+        </nb-step>
+        <nb-step [label]="labelFour">
+          <ng-template #labelFour>Fourth step</ng-template>
+          <h3>Enjoy your free trip!</h3>
+          <p class="lorem">
+            Now that you've chosen a ride, just sit and drink your Turkish tea and wait for your new friend to come
+            pick you up!
+          </p>
+          <button nbButton nbStepperPrevious>prev</button>
+          <button nbButton disabled nbStepperNext>next</button>
+        </nb-step>
+      </nb-stepper>
+    </nb-card-body>
+  </nb-card>
+</nb-layout-column>

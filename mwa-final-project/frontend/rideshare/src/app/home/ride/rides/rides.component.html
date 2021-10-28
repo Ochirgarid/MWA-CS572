@@ -1,0 +1,12 @@
+<app-search> </app-search>
+<nb-card>
+    <nb-card-body>
+        <nb-alert *ngIf="isEmpty()" status="warning" > Sorry, could not find any matching ride. </nb-alert>
+        <nb-list>
+            <nb-list-item *ngFor="let ride of allRides">
+                <app-ride-item [ride]="ride"> </app-ride-item>
+            </nb-list-item>
+        </nb-list>
+    </nb-card-body>
+</nb-card>
+

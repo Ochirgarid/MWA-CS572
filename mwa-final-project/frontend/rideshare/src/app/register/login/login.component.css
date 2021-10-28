@@ -1,0 +1,23 @@
+.form-cart button{
+  margin-top: 20px;
+  width: 100%;
+}
+.elements {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.items{
+  padding: 10%;
+}
+.form-cart{
+  width: 50%;
+  margin: auto;
+}
+.form-header{
+  text-align: center;
+  margin-bottom: auto;
+}
+.another-action{
+  text-align: center;
+  margin-top: 5%;
+}

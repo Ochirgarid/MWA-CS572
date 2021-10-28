@@ -1,0 +1,59 @@
+<nav class="navbar is-dark">
+	<div class="container">
+	<div class="navbar-brand">
+		<a class="navbar-item" href="https://bulma.io">
+			<img src="https://bulma.io/images/bulma-logo-white.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+		</a>
+	</div>
+
+	<div class="navbar-menu">
+		<div class="navbar-end">
+			<a class="navbar-item" (click)="logout()">Logout</a>
+		</div>
+	</div>
+	</div>
+</nav>
+<div class="admin container">
+
+<div>{{staffresponse}}</div>
+<!-- <p appInvitedir [result]="stuinfo.status">paragraph is visible or not</p> -->
+<table class="table is-fullwidth is-hoverable">
+  <thead>
+    <tr>
+      <th> ID </th>
+      <th> NAME</th>
+      <th> EMAIL ADDRESS</th>
+      <th> EXAM</th>
+      <th> STATUS</th>
+      <th>SEND RESULT</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor='let stuinfo of studentinfo;let idn=index'>
+      <td>{{idn+1}}</td>
+      <td>{{stuinfo.name}}</td>
+      <td class="has-text-weight-bold">{{stuinfo.email}}</td>
+      <td>
+        <button class="button is-link" type="submit" (click)='[sendinvitation(stuinfo.email,stuinfo.status)]'>Invite</button>
+      </td>
+      <div *ngIf=""></div>
+      <td class="has-text-weight-bold">{{stuinfo.status}}</td>
+      <td>
+        <p appIsdisabled [result]='stuinfo.status'><button class="button is-success" type="submit" (click)='[sendemail(stuinfo.email,stuinfo.status)]'>Send
+          </button></p>
+
+      </td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th> ID </th>
+      <th> NAME</th>
+      <th> EMAIL ADDRESS</th>
+      <th> EXAM</th>
+      <th> STATUS</th>
+      <th>SEND RESULT</th>
+    </tr>
+  </tfoot>
+</table>
+</div>

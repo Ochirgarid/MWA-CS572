@@ -1,0 +1,13 @@
+<nb-card status="success">
+  <nb-card-header>
+    {{ride.from}} 
+      <nb-icon icon="arrow-forward-outline"> </nb-icon>
+    {{ride.to}}
+    
+  </nb-card-header>
+  <nb-card-body>
+    <nb-icon icon="people-outline"> </nb-icon> Number of seats: {{ride.seatsNumber}}
+    <nb-icon icon="car-outline"> </nb-icon> Car model: {{ride.car.model}}
+    <nb-icon icon="calendar-outline"> </nb-icon> Car year: {{getYearOfDate(ride.car.year)}}
+  </nb-card-body>
+</nb-card>

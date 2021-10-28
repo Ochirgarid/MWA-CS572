@@ -1,0 +1,23 @@
+{
+  "name": "homework-04---nodejs-03-ochirgarid",
+  "version": "1.0.0",
+  "description": "CS572 MWA Homework 4",
+  "main": "index.js",
+  "dependencies": {
+    "rxjs": "^6.6.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maharishi-university/homework-04---nodejs-03-Ochirgarid.git"
+  },
+  "author": "Ochirgarid Chinzorig",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/maharishi-university/homework-04---nodejs-03-Ochirgarid/issues"
+  },
+  "homepage": "https://github.com/maharishi-university/homework-04---nodejs-03-Ochirgarid#readme"
+}
